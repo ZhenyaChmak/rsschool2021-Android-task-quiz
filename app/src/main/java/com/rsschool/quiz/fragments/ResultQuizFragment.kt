@@ -36,8 +36,6 @@ class ResultQuizFragment : Fragment() {
         val result = countingResult(answerArray, correctAnswerArray)
         val yourResult = setYourResult(result,correctAnswerArray.size)
 
-
-
         setPositionClose()
 
         setPositionRestart()
@@ -45,7 +43,6 @@ class ResultQuizFragment : Fragment() {
         setPositionShare(answerArray, yourResult)
 
     }
-
 
 
     private fun setPositionShare(answerArray: IntArray,yourResult : String) {

@@ -14,7 +14,7 @@ import kotlin.system.exitProcess
 class MainActivity : AppCompatActivity(), Navigator {
 
     private lateinit var binding : ActivityMainBinding
-    private val positionQuestion = 0
+    private var positionQuestion = 0
     private val answerArray = IntArray(ListOfQuestions.onListOfQueue.size)
 
 
@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity(), Navigator {
     }
 
     override fun goBack() {
-
-        onBackPressed()
+         onBackPressed()
     }
 
     override fun goToStart() {

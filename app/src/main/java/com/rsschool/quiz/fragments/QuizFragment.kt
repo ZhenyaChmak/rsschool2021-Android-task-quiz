@@ -20,6 +20,7 @@ class QuizFragment : Fragment() {
     private val binding get() = requireNotNull(_binding)
     private var answerArray : IntArray = IntArray(1)
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,15 +28,13 @@ class QuizFragment : Fragment() {
     ): View? {
         _binding = FragmentQuizBinding.inflate(inflater, container, false)
         answerArray = arguments?.getIntArray(ARRAY_ANSWER_KEY) ?: IntArray(1)
-
-
         return binding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-     //   context?.setTheme(R.style.Theme_Quiz_Test)
+
         setListOfQuestion()
 
         setPositionNextButton()
@@ -44,7 +43,7 @@ class QuizFragment : Fragment() {
 
         setPositionPreviousBotton()
 
- setColor(getPositionQuestion())
+        setColor(getPositionQuestion())
 
     }
 
@@ -108,7 +107,8 @@ class QuizFragment : Fragment() {
     }
 
     private fun setPositionPreviousBotton () {
-        binding.previousButton.setOnClickListener { navigator().goBack() }
+       binding.previousButton.setOnClickListener { navigator().goBack() }
+
 
         if(getPositionQuestion()>0) binding.previousButton.setEnabled(true)
         else binding.previousButton.setEnabled(false)
@@ -173,7 +173,6 @@ class QuizFragment : Fragment() {
             }
         }
     }
-
 }
 
 

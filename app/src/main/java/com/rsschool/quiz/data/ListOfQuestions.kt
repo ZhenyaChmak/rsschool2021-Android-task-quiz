@@ -42,11 +42,11 @@ object ListOfQuestions   {
     )
 
     val answers = arrayOf(
-        R.string.answer12,
-        R.string.answer23,
-        R.string.answer33,
-        R.string.answer44,
-        R.string.answer55,
+        R.string.answer14,
+        R.string.answer24,
+        R.string.answer31,
+        R.string.answer45,
+        R.string.answer51,
     )
 }
 

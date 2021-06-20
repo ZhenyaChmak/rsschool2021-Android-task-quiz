@@ -6,49 +6,48 @@
 
 
     <string name="question1">
-        What is the capital of Tajikistan?
+        Размеры в битах для Int?
     </string>
-    <string name="answer11">Berlin</string>
-    <string name="answer12">Dushanbe</string>
-    <string name="answer13">Tashkent</string>
-    <string name="answer14">Bishkek</string>
-    <string name="answer15">Astana</string>
+    <string name="answer11">1 бит</string>
+    <string name="answer12">8 бит</string>
+    <string name="answer13">16 бит</string>
+    <string name="answer14">32 бит</string>
+    <string name="answer15">64 бит</string>
 
     <string name="question2">
-        2 + 2 = ?
+        Кто является создателем Kotlin?
     </string>
-    <string name="answer21">3</string>
-    <string name="answer22">1</string>
-    <string name="answer23">4</string>
-    <string name="answer24">5</string>
-    <string name="answer25">8</string>
+    <string name="answer21">Microsoft</string>
+    <string name="answer22">Oracle</string>
+    <string name="answer23">Google</string>
+    <string name="answer24">JetBrains</string>
+    <string name="answer25">Apple</string>
 
     <string name="question3">
-       What concept is used to indicate that a student is going to in the shortest
-        possible time to close all debts for studies at the university before the session?
+       Какой из нижеприведенных вариантов используется для обработки исключений типа Nothing?
     </string>
-    <string name="answer31">pass</string>
-    <string name="answer32">flying</string>
-    <string name="answer33">speed run</string>
-    <string name="answer34">blitzkrieg</string>
-    <string name="answer35">jogging</string>
+    <string name="answer31">Элвис-оператор</string>
+    <string name="answer32">Интервалы</string>
+    <string name="answer33">Лямбда-функция</string>
+    <string name="answer34">Изолированные классы</string>
+    <string name="answer35">Абстрактные классы</string>
 
     <string name="question4">
-        What year did java 1.0 appeared?
+        На базе чего построен язык Kotlin?
     </string>
-    <string name="answer41">1991</string>
-    <string name="answer42">1990</string>
-    <string name="answer43">1997</string>
-    <string name="answer44">1996</string>
-    <string name="answer45">1995</string>
+    <string name="answer41">На базе языка C++</string>
+    <string name="answer42">На базе языка Python</string>
+    <string name="answer43">На базе платформы Intellij IDEA</string>
+    <string name="answer44">На базе Android Studio</string>
+    <string name="answer45">На базе Java Virtual Machine</string>
 
     <string name="question5">
-        Which beer is NOT Bavarian (Hell, Weissbier, Kellerbier and Zhigulevskoe)?
+        Какого типа данных не существует в Kotlin?
     </string>
-    <string name="answer51">None of them</string>
-    <string name="answer52">Hell</string>
-    <string name="answer53">Weissbier</string>
-    <string name="answer54">Kellerbier</string>
-    <string name="answer55">Zhigulevskoe</string>
+    <string name="answer51">Все перечисленные типы данных существуют</string>
+    <string name="answer52">Object</string>
+    <string name="answer53">Int</string>
+    <string name="answer54">Array</string>
+    <string name="answer55">List</string>
 
 </resources>
