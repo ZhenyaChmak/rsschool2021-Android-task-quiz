@@ -26,6 +26,7 @@ class QuizFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setColor(getPositionQuestion())
         _binding = FragmentQuizBinding.inflate(inflater, container, false)
         answerArray = arguments?.getIntArray(ARRAY_ANSWER_KEY) ?: IntArray(1)
         return binding.root
@@ -42,8 +43,6 @@ class QuizFragment : Fragment() {
         setPositionToolBar()
 
         setPositionPreviousBotton()
-
-        setColor(getPositionQuestion())
 
     }
 
@@ -74,11 +73,11 @@ class QuizFragment : Fragment() {
 
     private fun setColor(nameColor: Int){
         when(nameColor){
-            1->context?.setTheme(R.style.Theme_Quiz_One)
-            2->context?.setTheme(R.style.Theme_Quiz_Tho)
-            3->context?.setTheme(R.style.Theme_Quiz_Three)
-            4->context?.setTheme(R.style.Theme_Quiz_Four)
-            5->context?.setTheme(R.style.Theme_Quiz_Five)
+            0->context?.setTheme(R.style.Theme_Quiz_One)
+            1->context?.setTheme(R.style.Theme_Quiz_Tho)
+            2->context?.setTheme(R.style.Theme_Quiz_Three)
+            3->context?.setTheme(R.style.Theme_Quiz_Four)
+            4->context?.setTheme(R.style.Theme_Quiz_Five)
         }
     }
 
