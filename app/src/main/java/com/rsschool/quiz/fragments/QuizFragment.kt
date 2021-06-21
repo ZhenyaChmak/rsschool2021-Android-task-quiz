@@ -1,5 +1,6 @@
 package com.rsschool.quiz.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +28,7 @@ class QuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setColor(getPositionQuestion())
+
         _binding = FragmentQuizBinding.inflate(inflater, container, false)
         answerArray = arguments?.getIntArray(ARRAY_ANSWER_KEY) ?: IntArray(1)
         return binding.root
@@ -73,11 +75,16 @@ class QuizFragment : Fragment() {
 
     private fun setColor(nameColor: Int){
         when(nameColor){
-            0->context?.setTheme(R.style.Theme_Quiz_One)
-            1->context?.setTheme(R.style.Theme_Quiz_Tho)
-            2->context?.setTheme(R.style.Theme_Quiz_Three)
-            3->context?.setTheme(R.style.Theme_Quiz_Four)
-            4->context?.setTheme(R.style.Theme_Quiz_Five)
+            0->{context?.setTheme(R.style.Theme_Quiz_One)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.deep_orange_100)}
+            1-> {context?.setTheme(R.style.Theme_Quiz_Tho)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.deep_purple_100_dark)}
+            2-> {context?.setTheme(R.style.Theme_Quiz_Three)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.cyan_100_dark)}
+            3->{context?.setTheme(R.style.Theme_Quiz_Four)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.light_green_100_dark)}
+            4->{context?.setTheme(R.style.Theme_Quiz_Five)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.yellow_100)}
         }
     }
 

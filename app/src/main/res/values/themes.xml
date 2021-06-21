@@ -57,12 +57,6 @@
     </style>
 
     <style name="Theme.Quiz.Test" parent="Theme.Quiz">
-        <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryDark">@color/red</item>
-        <item name="colorPrimaryVariant">@color/red</item>
-        <item name="colorSecondary">@color/red</item>
-        <item name="colorSecondaryVariant">@color/red</item>
-        <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/red</item>
     </style>
 
