@@ -9,7 +9,7 @@ fun Fragment.navigator():Navigator{
 
 interface Navigator {
 
-    fun goBack()
+    fun onBackPressed()
 
     fun goToStart()
 

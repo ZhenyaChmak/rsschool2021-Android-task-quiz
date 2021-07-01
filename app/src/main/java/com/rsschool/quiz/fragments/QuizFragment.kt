@@ -1,6 +1,5 @@
 package com.rsschool.quiz.fragments
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import android.widget.RadioButton
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.rsschool.quiz.R
-import com.rsschool.quiz.activities.MainActivity
 import com.rsschool.quiz.data.ListOfQuestions
 import com.rsschool.quiz.databinding.FragmentQuizBinding
 import com.rsschool.quiz.fragments.contract.navigator
@@ -28,9 +26,8 @@ class QuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setColor(getPositionQuestion())
-
-        _binding = FragmentQuizBinding.inflate(inflater, container, false)
         answerArray = arguments?.getIntArray(ARRAY_ANSWER_KEY) ?: IntArray(1)
+        _binding = FragmentQuizBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -44,7 +41,7 @@ class QuizFragment : Fragment() {
 
         setPositionToolBar()
 
-        setPositionPreviousBotton()
+        setPositionPreviousButton()
 
     }
 
@@ -75,16 +72,21 @@ class QuizFragment : Fragment() {
 
     private fun setColor(nameColor: Int){
         when(nameColor){
-            0->{context?.setTheme(R.style.Theme_Quiz_One)
-                activity?.window?.statusBarColor = getResources().getColor(R.color.deep_orange_100)}
-            1-> {context?.setTheme(R.style.Theme_Quiz_Tho)
-                activity?.window?.statusBarColor = getResources().getColor(R.color.deep_purple_100_dark)}
-            2-> {context?.setTheme(R.style.Theme_Quiz_Three)
-                activity?.window?.statusBarColor = getResources().getColor(R.color.cyan_100_dark)}
-            3->{context?.setTheme(R.style.Theme_Quiz_Four)
-                activity?.window?.statusBarColor = getResources().getColor(R.color.light_green_100_dark)}
-            4->{context?.setTheme(R.style.Theme_Quiz_Five)
-                activity?.window?.statusBarColor = getResources().getColor(R.color.yellow_100)}
+            0->{ context?.setTheme(R.style.Theme_Quiz_One)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.deep_orange_100)
+            }
+            1-> { context?.setTheme(R.style.Theme_Quiz_Tho)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.deep_purple_100_dark)
+            }
+            2-> { context?.setTheme(R.style.Theme_Quiz_Three)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.cyan_100_dark)
+            }
+            3->{ context?.setTheme(R.style.Theme_Quiz_Four)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.light_green_100_dark)
+            }
+            4->{ context?.setTheme(R.style.Theme_Quiz_Five)
+                activity?.window?.statusBarColor = getResources().getColor(R.color.yellow_100)
+            }
         }
     }
 
@@ -108,13 +110,12 @@ class QuizFragment : Fragment() {
 
         if(getPositionQuestion()>0) {
             binding.toolbar.setNavigationIcon(R.drawable.ic_baseline_chevron_left_24)
-            binding.toolbar.setNavigationOnClickListener{ navigator().goBack()}
+            binding.toolbar.setNavigationOnClickListener{ navigator().onBackPressed()}
         }
     }
 
-    private fun setPositionPreviousBotton () {
-       binding.previousButton.setOnClickListener { navigator().goBack() }
-
+    private fun setPositionPreviousButton () {
+       binding.previousButton.setOnClickListener { navigator().onBackPressed() }
 
         if(getPositionQuestion()>0) binding.previousButton.setEnabled(true)
         else binding.previousButton.setEnabled(false)
@@ -122,8 +123,8 @@ class QuizFragment : Fragment() {
 
     private fun nextQuestion() {
         if(getPositionQuestion()<answerArray.size-1) {
+
             val fragment: QuizFragment = QuizFragment.newInstance (
-        //        (requireActivity() as MainActivity).getScreensCount(),
                 getPositionQuestion()+1,
                 answerArray
             )

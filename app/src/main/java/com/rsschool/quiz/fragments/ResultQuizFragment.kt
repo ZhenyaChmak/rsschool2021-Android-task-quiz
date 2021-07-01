@@ -42,6 +42,7 @@ class ResultQuizFragment : Fragment() {
 
         setPositionShare(answerArray, yourResult)
 
+
     }
 
 
@@ -96,6 +97,7 @@ class ResultQuizFragment : Fragment() {
         _binding = null
         super.onDestroyView()
     }
+
 
     companion object{
 
